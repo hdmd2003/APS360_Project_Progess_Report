@@ -8,7 +8,9 @@ data = pd.read_excel("CLEAR_corpus_final.xlsx")
 
 data["BT_easiness"] = scaler.fit_transform(data[["BT_easiness"]])
 
-excerpt = "Hitler was born in Braunau am Inn in Austria-Hungary and was raised near Linz. He lived in Vienna later in the first decade of the 1900s and moved to Germany in 1913. He was decorated during his service in the German Army in World War I. In 1919, he joined the German Workers' Party (DAP), the precursor of the Nazi Party, and was appointed leader of the Nazi Party in 1921. In 1923, he attempted to seize governmental power in a failed coup in Munich and was imprisoned with a sentence of five years. In jail, he dictated the first volume of his autobiography and political manifesto Mein Kampf (My Struggle). After his early release in 1924, Hitler gained popular support by attacking the Treaty of Versailles and promoting pan-Germanism, anti-Semitism and anti-communism with charismatic oratory and Nazi propaganda. He frequently denounced international capitalism and communism as part of a Jewish conspiracy."
+excerpt = data["Excerpt"][1]
+print(data["BT_easiness"][1])
+print(data["Excerpt"][1])
 
 def syllable_count(word):
     '''
